@@ -1,6 +1,14 @@
-![Showdown][sd-logo]
+# Markdown rendering on client side
 
-**Example using [Showdown](https://github.com/showdownjs/showdown) client side library**
+Example can be seen live on a free.fr webiste here: http://boitaid.free.fr/markdown
+
+Here is the [index.html](index.html)
+
+Below is a markdown sample file from and using [Showdown](https://github.com/showdownjs/showdown) client side library:
+
+---------
+
+![Showdown][sd-logo]
 
 Showdown is a Javascript Markdown to HTML converter, based on the original works by John Gruber. It can be used client side (in the browser) or server side (with Node or io).
 
