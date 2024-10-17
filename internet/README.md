@@ -1,0 +1,36 @@
+# Internet Samples
+
+Pieces of code for web sites or web APIs.
+
+## Client Side
+
+### Javascript
+
+- [markdown](client-side/javascript/markdown/README.md) : rendering markdown on client side using [Showdown](https://github.com/showdownjs/showdown).
+
+## Server Side
+
+### PhP
+
+#### Pages Perso Free.fr
+
+- Voir le site [les.pages.perso.chez.free.fr](http://les.pages.perso.chez.free.fr/) pour plus d'informations "sur tous les aspects de l'utilisation des pages perso chez Free".
+  - Notament, la page traitant de [la migration vers PHP 5.6 et PHP 8](http://les.pages.perso.chez.free.fr/migrations/php5v6.io)
+    - Par défaut, on a `PHP 4.4.3-dev`
+      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/4.4.3-dev/phpinfo.php)
+    - On peut avoir `PHP 5.1.3RC4-dev` en mettant `php 1` (ou `php 5`) dans un .htaccess
+      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.1.3RC4-dev/phpinfo.php)
+    - **/!\ Beta version /!\\** `PHP 5.6.34` avec `php56 1` dans un .htaccess
+      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.6.34/phpinfo.php)
+
+> **ATTENTION** avec *free.fr*:
+>
+> - *free.fr* n'a toujours pas implémenté SSL, donc **pas de https**, donc les mots de passe sont en clair ! ([Mais ce serait en cours (nouvelle du 24 Mars 2024)...](https://www.busyspider.fr/Actu/news_24743_Free-les-pages-perso-sont-en-cours-de-migration-en-version-securisee-https-comme-annonce-lors-de-la-journee-des-communautes-free.php))
+> - **Le mot de passe SQL doit avoir entre 8 et 10 caractères**. Bien que l'interface *free.fr* n'impose pas cette contrainte, il vous sera impossible de vous connecter avec un mot de passe plus long ou court.
+
+#### PhP Samples
+
+- [simple-api-json-file](server-side/php/simple-api-json-file/README.md): une simple API utilisant un simple fichier json comme "base de données"
+- [simple-api-mysql](server-side/php/simple-api-mysql/README.md): une simple API avec authentification et base MySQL.
+
+(Ces examples fonctionnent avec `PHP Version 5.1.3RC4-dev` les pages perso de *free.fr*)

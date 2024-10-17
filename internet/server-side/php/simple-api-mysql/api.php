@@ -1,7 +1,7 @@
 <?php
 
-if ($_SERVER['HTTP_HOST'] == "woofer.free.fr") {
-    include 'config.woofer.php';
+if ($_SERVER['HTTP_HOST'] == "phramusca.free.fr") {
+    include 'config.phramusca.php';
 } else {
     include 'config.local.php';
 }
@@ -78,7 +78,7 @@ function authenticate() {
         $username = mysql_real_escape_string($_SERVER['PHP_AUTH_USER']);
         $password = mysql_real_escape_string($_SERVER['PHP_AUTH_PW']);
 
-        $query = mysql_query("SELECT password FROM users WHERE username = '$username'");
+        $query = mysql_query("SELECT password FROM samples_users WHERE username = '$username'");
         if (!$query) {
             header('HTTP/1.1 401 Unauthorized');
             echo json_encode_custom(array('message' => 'Erreur de requête.'));
@@ -125,7 +125,7 @@ switch ($method) {
 
 function handleGet() {
     global $connection;
-    $result = mysql_query("SELECT * FROM items", $connection);
+    $result = mysql_query("SELECT * FROM samples_items", $connection);
     if (!$result) {
         echo json_encode_custom(array('message' => 'Erreur de requête.'));
         return;
@@ -147,7 +147,7 @@ function handlePost() {
 
     $name = mysql_real_escape_string($input['name']);
     $email = mysql_real_escape_string($input['email']);
-    $query = "INSERT INTO items (name, email) VALUES ('$name', '$email')";
+    $query = "INSERT INTO samples_items (name, email) VALUES ('$name', '$email')";
     if (mysql_query($query, $connection)) {
         echo json_encode_custom(array('message' => 'Données ajoutées', 'data' => $input));
     } else {
@@ -166,7 +166,7 @@ function handlePut() {
     $id = intval($input['id']);
     $name = mysql_real_escape_string($input['name']);
     $email = mysql_real_escape_string($input['email']);
-    $query = "UPDATE items SET name = '$name', email = '$email' WHERE id = $id";
+    $query = "UPDATE samples_items SET name = '$name', email = '$email' WHERE id = $id";
     if (mysql_query($query, $connection)) {
         echo json_encode_custom(array('message' => 'Données mises à jour', 'data' => $input));
     } else {
@@ -183,7 +183,7 @@ function handleDelete() {
     }
 
     $id = intval($input['id']);
-    $query = "DELETE FROM items WHERE id = $id";
+    $query = "DELETE FROM samples_items WHERE id = $id";
     if (mysql_query($query, $connection)) {
         echo json_encode_custom(array('message' => 'Données supprimées'));
     } else {

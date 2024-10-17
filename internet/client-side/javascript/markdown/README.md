@@ -1,3 +1,10 @@
+# Markdown rendering on client side
+
+Example can be seen live on a free.fr webiste here: <http://phramusca.free.fr/samples/client-side/javascript/markdown/>
+
+- `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetch('README.md') // Adjust path to your Markdown file
+            fetch('showdown-readme.md.md') // Adjust path to your Markdown file
                 .then(response => response.text())
                 .then(markdown => {
                     const converter = new showdown.Converter();
@@ -23,3 +30,6 @@
     </script>
 </body>
 </html>
+```
+
+- [showdown-readme.md](showdown-readme.md)

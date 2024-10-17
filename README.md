@@ -2,5 +2,4 @@
 
 Pieces of code
 
-- [php](php/README.md)
-- [client-side](client-side/README.md)
+- [Internet](internet/README.md) : client and server side pieces of code for web sites or web APIs.

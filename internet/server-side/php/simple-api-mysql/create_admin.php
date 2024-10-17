@@ -1,14 +1,14 @@
 <?php
 
-if ($_SERVER['HTTP_HOST'] == "woofer.free.fr") {
-    include 'config.woofer.php';
+if ($_SERVER['HTTP_HOST'] == "phramusca.free.fr") {
+    include 'config.phramusca.php';
 } else {
     include 'config.local.php';
 }
 
 $connection = mysql_connect($db_host, $db_user, $db_pass);
 if (!$connection) {
-    die('Échec de la connexion : ' . mysql_error());
+    die('Échec de la connexion : ' . mysql_error() . ' with user ' . $db_user);
 }
 
 $db_selected = mysql_select_db($db_name, $connection);
@@ -32,7 +32,7 @@ $hashed_password = crypt($password, $salt);
 
 // Préparer et exécuter la requête d'insertion
 $username = mysql_real_escape_string($username);
-$query = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
+$query = "INSERT INTO samples_users (username, password) VALUES ('$username', '$hashed_password')";
 
 if (mysql_query($query, $connection)) {
     echo "Utilisateur administrateur créé avec succès.";
