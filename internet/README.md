@@ -14,23 +14,43 @@ Pieces of code for web sites or web APIs.
 
 #### Pages Perso Free.fr
 
-- Voir le site [les.pages.perso.chez.free.fr](http://les.pages.perso.chez.free.fr/) pour plus d'informations "sur tous les aspects de l'utilisation des pages perso chez Free".
-  - Notament, la page traitant de [la migration vers PHP 5.6 et PHP 8](http://les.pages.perso.chez.free.fr/migrations/php5v6.io)
-    - Par défaut, on a `PHP 4.4.3-dev`
-      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/4.4.3-dev/phpinfo.php)
-    - On peut avoir `PHP 5.1.3RC4-dev` en mettant `php 1` (ou `php 5`) dans un .htaccess
-      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.1.3RC4-dev/phpinfo.php)
-    - **/!\ Beta version /!\\** `PHP 5.6.34` avec `php56 1` dans un .htaccess
-      - [phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.6.34/phpinfo.php)
+Voir le site [les.pages.perso.chez.free.fr](http://les.pages.perso.chez.free.fr/) pour plus d'informations "sur tous les aspects de l'utilisation des pages perso chez Free".
 
-> **ATTENTION** avec *free.fr*:
+##### Versions de Php
+
+Voir [la migration vers PHP 5.6 et PHP 8](http://les.pages.perso.chez.free.fr/migrations/php5v6.io) sur `les.pages.perso.chez.free.fr`.
+
+- Par défaut, on a `PHP 4.4.3-dev` ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/4.4.3-dev/phpinfo.php))
+- On peut avoir `PHP 5.1.3RC4-dev` en mettant `php 1` (ou `php 5`) dans un .htaccess ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.1.3RC4-dev/phpinfo.php))
+- `PHP 5.6.34` avec `php56 1` dans un .htaccess. (En Beta version, mais depuis 2018 ...) ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.6.34/phpinfo.php))
+
+##### SSL / HTTPS
+
+> **ATTENTION** avec *free.fr*
 >
 > - *free.fr* n'a toujours pas implémenté SSL, donc **pas de https**, donc les mots de passe sont en clair ! ([Mais ce serait en cours (nouvelle du 24 Mars 2024)...](https://www.busyspider.fr/Actu/news_24743_Free-les-pages-perso-sont-en-cours-de-migration-en-version-securisee-https-comme-annonce-lors-de-la-journee-des-communautes-free.php))
 > - **Le mot de passe SQL doit avoir entre 8 et 10 caractères**. Bien que l'interface *free.fr* n'impose pas cette contrainte, il vous sera impossible de vous connecter avec un mot de passe plus long ou court.
+
+##### .htaccess
+
+Outre la version de Php, .htaccess peut-être utilisé pour restreindre les accès et configurer (un peu) Php. Examples:
+
+```shell
+## Passage register globals off
+SetEnv REGISTER_GLOBALS 0
+# https://stackoverflow.com/questions/3593210/what-are-register-globals-in-php
+
+## identifiant de session placé dans le cookie
+SetEnv SESSION_USE_TRANS_SID 0
+# https://www.php.net/manual/en/session.configuration.php#ini.session.use-trans-sid
+
+```
 
 #### PhP Samples
 
 - [simple-api-json-file](server-side/php/simple-api-json-file/README.md): une simple API utilisant un simple fichier json comme "base de données"
 - [simple-api-mysql](server-side/php/simple-api-mysql/README.md): une simple API avec authentification et base MySQL.
 
-(Ces examples fonctionnent avec `PHP Version 5.1.3RC4-dev` les pages perso de *free.fr*)
+> Ces examples fonctionnent avec `PHP Version 5.1.3RC4-dev` les pages perso de *free.fr*
+>
+> Mais j'ai eu des soucis avec des pages perso crées récemment au niveau connexion mysql. J'ai du passer à `PHP 5.6.34`
