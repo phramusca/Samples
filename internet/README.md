@@ -33,7 +33,9 @@ Voir [la migration vers PHP 5.6 et PHP 8](http://les.pages.perso.chez.free.fr/mi
 
 ##### .htaccess
 
-Outre la version de Php, .htaccess peut-être utilisé pour restreindre les accès et configurer (un peu) Php. Examples:
+Voir [Le .htaccess des pages perso](http://les.pages.perso.chez.free.fr/le-htaccess-des-pages-perso.io) sur `les.pages.perso.chez.free.fr` pour plus d'infos les .htaccess particuliers des pages persos de *free.fr*
+
+Examples:
 
 ```shell
 ## Passage register globals off
