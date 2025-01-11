@@ -67,30 +67,28 @@
   | Cellule 1 | Cellule 2 |
   ``````
 
-- [Creating content](https://picocms.org/docs/#creating-content)
+- Plus d'infos: [Creating content](https://picocms.org/docs/#creating-content)
 
 ### Plugins
 
 - [Liste des plugins](https://picocms.org/plugins/)
-  - [Pico Editor](https://github.com/astappiev/pico-editor)
-    - Apporte un éditeur de fichier markdown en ligen et un gestionnaire de fichiers.
-    - Installation:
-      - `cd plugins && git clone https://github.com/astappiev/pico-editor.git PicoEditor`
-      - Créer un fichier `config/config.yml`:
 
-        ```yaml
-        # Pico Editor Configuration
-        PicoEditor:
-          enabled: true                           # Activer ou non le plugin.
-          password: SHA512-HASHED-PASSWORD        # Spécifier le mot de passe voulu, hashé ne SHA512 (https://sha512.online/).
-          url: editor                             # Pour changer l'url de l'éditeur.
-        ```
+- [Pico Editor](https://github.com/astappiev/pico-editor)
+  - Apporte un éditeur de fichier markdown en ligne et un gestionnaire de fichiers.
+  - Installation:
+    - `cd plugins && git clone https://github.com/astappiev/pico-editor.git PicoEditor`
+    - Créer un fichier `config/config.yml`:
 
-      - Téléverser (uploader) le tout sur *ftpperso.free.fr* dans /pico-with-editor (par exemple)
-      - Se connecter à [http://monpseudo.free.fr/pico-with-editor/?editor](http://phramusca.free.fr/pico-with-editor/?editor)
-
-  - https://sha512.online/ ?
-
+      ```yaml
+      # Pico Editor Configuration
+      PicoEditor:
+        enabled: true                           # Activer ou non le plugin.
+        password: SHA512-HASHED-PASSWORD        # Spécifier le mot de passe voulu, hashé ne SHA512 (https://sha512.online/).
+        url: editor                             # Pour changer l'url de l'éditeur.
+      ```
+    - Créer un dossier `sessions` à la **racine** du site (/).
+    - Téléverser (uploader) le tout sur *ftpperso.free.fr* dans /pico-with-editor (par exemple)
+    - Se connecter à [http://monpseudo.free.fr/pico-with-editor/?editor](http://phramusca.free.fr/pico-with-editor/?editor)
 
 ### Themes
 
