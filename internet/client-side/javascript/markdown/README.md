@@ -1,6 +1,6 @@
 # Markdown rendering on client side
 
-Example can be seen live on a free.fr webiste here: <http://phramusca.free.fr/samples/client-side/javascript/markdown/>
+Example can be seen live on a free.fr webiste here: <http://phramusca.free.fr/samples/internet/client-side/javascript/markdown/>
 
 - `index.html`:
 

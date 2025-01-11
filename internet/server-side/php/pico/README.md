@@ -83,7 +83,7 @@
       # Pico Editor Configuration
       PicoEditor:
         enabled: true                           # Activer ou non le plugin.
-        password: SHA512-HASHED-PASSWORD        # Spécifier le mot de passe voulu, hashé ne SHA512 (https://sha512.online/).
+        password: SHA512-HASHED-PASSWORD        # Spécifier le mot de passe voulu, hashé en SHA512 (https://sha512.online/).
         url: editor                             # Pour changer l'url de l'éditeur.
       ```
     - Créer un dossier `sessions` à la **racine** du site (/).

@@ -20,9 +20,9 @@ Voir le site [les.pages.perso.chez.free.fr](http://les.pages.perso.chez.free.fr/
 
 Voir [la migration vers PHP 5.6 et PHP 8](http://les.pages.perso.chez.free.fr/migrations/php5v6.io) sur `les.pages.perso.chez.free.fr`.
 
-- Par défaut, on a `PHP 4.4.3-dev` ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/4.4.3-dev/phpinfo.php))
-- On peut avoir `PHP 5.1.3RC4-dev` en mettant `php 1` (ou `php 5`) dans un .htaccess ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.1.3RC4-dev/phpinfo.php))
-- `PHP 5.6.34` avec `php56 1` dans un .htaccess. (En Beta version, mais depuis 2018 ...) ([phpinfo](http://phramusca.free.fr/samples/server-side/php/phpinfo/5.6.34/phpinfo.php))
+- Par défaut, on a `PHP 4.4.3-dev` ([phpinfo](http://phramusca.free.fr/samples/internet/server-side/php/phpinfo/4.4.3-dev/phpinfo.php))
+- On peut avoir `PHP 5.1.3RC4-dev` en mettant `php 1` (ou `php 5`) dans un .htaccess ([phpinfo](http://phramusca.free.fr/samples/internet/server-side/php/phpinfo/5.1.3RC4-dev/phpinfo.php))
+- `PHP 5.6.34` avec `php56 1` dans un .htaccess. (En Beta version, mais depuis 2018 ...) ([phpinfo](http://phramusca.free.fr/samples/internet/server-side/php/phpinfo/5.6.34/phpinfo.php))
 
 ##### SSL / HTTPS
 

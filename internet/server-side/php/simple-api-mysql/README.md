@@ -42,13 +42,13 @@
 
 - Create the admin user:
   - Update `$username` in `create_admin.php`
-  - Run `curl -X GET http://phramusca.free.fr/samples/server-side/php/simple-api-mysql/create_admin.php`
+  - Run `curl -X GET http://phramusca.free.fr/samples/internet/server-side/php/simple-api-mysql/create_admin.php`
 
 - GET, POST, PUT or DELETE items:
 
 ```sh
-curl -u admin:wDq4KKVT -X GET http://phramusca.free.fr/samples/server-side/php/simple-api-mysql/api.php
-curl -u admin:wDq4KKVT -X POST -d '{"name":"John Doe", "email":"john.doe@example.com"}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/server-side/php/simple-api-mysql/api.php
-curl -u admin:wDq4KKVT -X PUT -d '{"id":1, "name":"Jane Doe", "email":"jane.doe@example.com"}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/server-side/php/simple-api-mysql/api.php
-curl -u admin:wDq4KKVT -X DELETE -d '{"id":1}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/server-side/php/simple-api-mysql/api.php
+curl -u admin:wDq4KKVT -X GET http://phramusca.free.fr/samples/internet/server-side/php/simple-api-mysql/api.php
+curl -u admin:wDq4KKVT -X POST -d '{"name":"John Doe", "email":"john.doe@example.com"}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/internet/server-side/php/simple-api-mysql/api.php
+curl -u admin:wDq4KKVT -X PUT -d '{"id":1, "name":"Jane Doe", "email":"jane.doe@example.com"}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/internet/server-side/php/simple-api-mysql/api.php
+curl -u admin:wDq4KKVT -X DELETE -d '{"id":1}' -H "Content-Type: application/json" http://phramusca.free.fr/samples/internet/server-side/php/simple-api-mysql/api.php
 ```
