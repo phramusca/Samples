@@ -52,6 +52,7 @@ SetEnv SESSION_USE_TRANS_SID 0
 
 - [simple-api-json-file](server-side/php/simple-api-json-file/README.md): une simple API utilisant un simple fichier json comme "base de données"
 - [simple-api-mysql](server-side/php/simple-api-mysql/README.md): une simple API avec authentification et base MySQL.
+- [pico](server-side/php/pico/README.md): Comment installer Pico, un "flat-file CMS", en bon Français un manager de contenu de site internet, avec back office mais sans base de données.
 
 > Ces examples fonctionnent avec `PHP Version 5.1.3RC4-dev` les pages perso de *free.fr*
 >

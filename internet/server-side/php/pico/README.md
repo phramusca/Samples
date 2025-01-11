@@ -2,8 +2,6 @@
 
 [Pico CMS](https://picocms.org/)
 
-[Documen]
-
 "A stupidly simple & blazing fast, flat file CMS. Making the web easy."
 
 > Attention:
@@ -69,16 +67,31 @@
   | Cellule 1 | Cellule 2 |
   ``````
 
-TODO https://picocms.org/docs/#creating-content
+- [Creating content](https://picocms.org/docs/#creating-content)
 
-### Pulgins
+### Plugins
 
-TODO https://picocms.org/plugins/
+- [Liste des plugins](https://picocms.org/plugins/)
+  - [Pico Editor](https://github.com/astappiev/pico-editor)
+    - Apporte un éditeur de fichier markdown en ligen et un gestionnaire de fichiers.
+    - Installation:
+      - `cd plugins && git clone https://github.com/astappiev/pico-editor.git PicoEditor`
+      - Créer un fichier `config/config.yml`:
 
-- TODO *Pico Editor* https://github.com/astappiev/pico-editor
+        ```yaml
+        # Pico Editor Configuration
+        PicoEditor:
+          enabled: true                           # Activer ou non le plugin.
+          password: SHA512-HASHED-PASSWORD        # Spécifier le mot de passe voulu, hashé ne SHA512 (https://sha512.online/).
+          url: editor                             # Pour changer l'url de l'éditeur.
+        ```
+
+      - Téléverser (uploader) le tout sur *ftpperso.free.fr* dans /pico-with-editor (par exemple)
+      - Se connecter à [http://monpseudo.free.fr/pico-with-editor/?editor](http://phramusca.free.fr/pico-with-editor/?editor)
+
   - https://sha512.online/ ?
-  - [http://phramusca.free.fr/pico-with-editor/?editor](http://phramusca.free.fr/pico-with-editor/?editor)
+
 
 ### Themes
 
-TODO https://picocms.org/themes/
+- [Liste des thèmes](https://picocms.org/themes/)
